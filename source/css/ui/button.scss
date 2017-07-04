@@ -1,0 +1,22 @@
+.button {
+  display: inline-block;
+
+  padding: 14px !important;
+
+  border: none;
+  border-radius: 5px;
+  outline: 0;
+
+  background-color: #00a1eb;
+
+  font-family: $montserrat-bold, sans-serif;
+  font-size: 0.8124rem;
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.button--white {
+  background-color: #fff;
+  color: #00a1eb;
+}
