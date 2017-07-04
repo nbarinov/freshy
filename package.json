@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/nbarinov/freshy#readme",
   "dependencies": {
+    "flexboxgrid": "^6.3.1",
     "normalize.css": "^7.0.0"
   },
   "devDependencies": {
