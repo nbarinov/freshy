@@ -60,7 +60,12 @@ gulp.task('fonts', function() {
 
 gulp.task('images', function () {
   return gulp.src(paths.images)
-    .pipe(imagemin())
+    .pipe(imagemin([
+          	imagemin.gifsicle({interlaced: true}),
+          	imagemin.jpegtran({progressive: true}),
+          	imagemin.optipng({optimizationLevel: 5}),
+          	imagemin.svgo({plugins: [{removeViewBox: true}]})
+          ]))
     .pipe(gulp.dest('./dist/images/'))
     .pipe(reload({stream: true}));
 });
