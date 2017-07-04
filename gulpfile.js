@@ -12,9 +12,9 @@ var gulp = require('gulp'),
 var paths = {
   html: ['source/*.html'],
   css: ['source/css/**/*.scss'],
-  js: ['source/js/*.js'],
+  js: ['source/js/**/*.js'],
   fonts: ['source/fonts/**/*.*'],
-  images: ['source/images/*.*']
+  images: ['source/images/**/*.*']
 }
 
 gulp.task('browserSync', function() {
@@ -44,7 +44,7 @@ gulp.task('css', function() {
 });
 
 gulp.task('scripts', function() {
-  return gulp.src('source/js/*.js')
+  return gulp.src('source/js/**/*.js')
     .pipe(uglifyjs())
     .pipe(concat('script.min.js'))
     .pipe(gulp.dest('./dist/js/'))
