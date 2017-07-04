@@ -1,0 +1,114 @@
+.service__wrapper {
+  padding: 45px 0;
+}
+
+.service__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &::before {
+    display: block;
+    content: '';
+
+    width: 170px;
+    height: 170px;
+    margin-bottom: 33px;
+
+    border-radius: 50%;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #00a1eb;
+
+    background-color: #00a1eb;
+
+    transition: background-color 140ms ease-out;
+  }
+
+  &:hover::before {
+    background-color: #fff;
+
+    animation-name: scale;
+    animation-duration: 540ms;
+  }
+}
+
+.service__item--catering,
+.service__item--sprzedaz,
+.service__item--dostawy {
+  &::before {
+    background-repeat: no-repeat;
+  }
+}
+
+.service__item--catering {
+  &::before {
+    background-image: url('../images/catering.png');
+    background-position: 65% 50%;
+  }
+
+  &:hover::before {
+    background-image: url('../images/catering-blue.png');
+  }
+}
+
+.service__item--sprzedaz {
+  &::before {
+    background-image: url('../images/sprzedaz.png');
+    background-position: 55% 50%;
+  }
+
+  &:hover::before {
+    background-image: url('../images/sprzedaz-blue.png');
+  }
+}
+
+.service__item--dostawy {
+  &::before {
+    background-image: url('../images/dostawy.png');
+    background-position: 45% 58%;
+  }
+
+  &:hover::before {
+    background-image: url('../images/dostawy-blue.png');
+  }
+}
+
+.service__button {
+  margin-top: 65px;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@media (min-width: $table-width) {
+  .service__p {
+    display: block;
+    width: 100%;
+    max-width: 50%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .service__wrapper {
+    padding: 102px 0 92px;
+  }
+
+  .service__p {
+    max-width: 100%;
+  }
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

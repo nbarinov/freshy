@@ -1,0 +1,40 @@
+.section {
+  width: 100%;
+}
+
+.section__wrapper {
+  width: 100%;
+  max-width: $desktop-width;
+  margin: 0 auto;
+}
+
+.section__title {
+  margin-bottom: 27px;
+}
+
+.section__title--min {
+  font-size: 1.5rem;
+}
+
+.section__p {
+  display: inline-block;
+
+  margin-bottom: 30px;
+
+  font-family: $hind-regular;
+  font-size: 0.875rem;
+  color: #737373;
+  line-height: 1.53125rem;
+}
+
+.section__p--center {
+  text-align: center;
+}
+
+.section__p--white {
+  color: #fff;
+}
+
+.section__p--right {
+  text-align: right;
+}

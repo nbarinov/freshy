@@ -1,0 +1,21 @@
+.page-footer {
+  background-color: #2b2b2b;
+}
+
+.page-footer__wrapper {
+  width: 100%;
+  max-width: $desktop-width;
+  margin: 0 auto;
+  padding: 55px 0;
+}
+
+.page-footer__p {
+  font-family: $montserrat-regular;
+  font-size: 0.875rem;
+  color: #fff;
+  line-height: 1;
+}
+
+.page-footer__p--right {
+  text-align: right;
+}

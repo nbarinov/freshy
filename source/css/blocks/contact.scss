@@ -1,0 +1,97 @@
+.contact {
+  background-color: #00a1eb;
+}
+
+.contact .row {
+  .col-lg-7 {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .col-lg-5 {
+    padding-right: 5%;
+  }
+}
+
+.contact__wrapper {
+  max-width: 100%;
+}
+
+.contact__map {
+  position: relative;
+}
+
+.contact__map-container {
+  height: 334px;
+  background-image: url('../images/map.jpg');
+  background-size: 150%;
+
+  transition: transform 140ms ease-out;
+}
+
+.contact__content {
+  padding: 45px 0;
+  background-color: #00a1eb;
+
+  &::after {
+    display: table;
+    content: '';
+    clear: both;
+  }
+}
+
+.contact__button {
+  float: right;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@media (min-width: $table-width) {
+  .contact__map {
+    -webkit-clip-path: polygon(0 0, 85% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 85% 0, 100% 100%, 0 100%);
+
+    &:hover {
+      .contact__layout {
+        opacity: 0;
+      }
+
+      .contact__map-container {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .contact__layout {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(#0054db, 0.82);
+
+    opacity: 1;
+
+    transition: opacity 140ms ease-out;
+  }
+
+  .contact__map-container {
+    height: 534px;
+    background-size: cover;
+  }
+
+  .contact__content {
+    padding: 102px 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contact__content {
+    padding: 135px 0;
+  }
+}
