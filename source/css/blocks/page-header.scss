@@ -3,6 +3,9 @@
   top: 0;
   left: 0;
   width: 100%;
+
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 .page-header__wrapper {
@@ -104,6 +107,10 @@
 }
 
 @media (min-width: $desktop-width) {
+  .page-header {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
   .page-header .col-lg-7 {
     display: flex;
     justify-content: space-between;

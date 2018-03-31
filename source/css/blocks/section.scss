@@ -1,5 +1,7 @@
 .section {
   width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 .section__wrapper {
@@ -37,4 +39,11 @@
 
 .section__p--right {
   text-align: right;
+}
+
+@media (min-width: $desktop-width) {
+  .section {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
 }
