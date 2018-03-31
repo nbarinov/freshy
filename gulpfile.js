@@ -42,6 +42,7 @@ gulp.task('css', function() {
     .pipe(rename('style.min.css'))
     .pipe(gulp.dest('./dist/css/'))
     .pipe(notify('CSS saved'));
+
 });
 
 gulp.task('scripts', function() {
@@ -59,6 +60,12 @@ gulp.task('fonts', function() {
 
 gulp.task('images', function () {
   return gulp.src(paths.images)
+    .pipe(imagemin([
+          	imagemin.gifsicle({interlaced: true}),
+          	imagemin.jpegtran({progressive: true}),
+          	imagemin.optipng({optimizationLevel: 5}),
+          	imagemin.svgo({plugins: [{removeViewBox: true}]})
+          ]))
     .pipe(gulp.dest('./dist/images/'));
 });
 
