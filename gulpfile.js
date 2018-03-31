@@ -22,6 +22,9 @@ gulp.task('browserSync', function() {
     server: {
       baseDir: './dist/'
     },
+    files: [
+      'dist/**/*.*'
+    ],
     port: 8080,
     open: true
   });
@@ -78,4 +81,5 @@ gulp.task('watcher', function() {
   gulp.watch(paths.images, ['images']);
 });
 
-gulp.task('default', ['watcher', 'browserSync']);
+gulp.task('default', ['html', 'css', 'scripts', 'fonts', 'images', 'watcher', 'browserSync']);
+gulp.task('build', ['html', 'css', 'scripts', 'fonts', 'images']);
